@@ -1,0 +1,92 @@
+  right: 200px;
+}
+
+#hero-image-block    .character-block .effect-image,
+#monster-image-block .character-block .effect-image {
+  position: absolute;
+  left: 60px;
+  bottom: 0px;
+}
+
+/* 設定transition class */
+/* 給 .hurt-text.attacked 使用*/
+#hero-image-block    .character-block .hurt-text,
+#monster-image-block .character-block .hurt-text {
+  position: absolute;
+  font-size: 60px;
+  color: red;
+  width: 100%;
+  left: 0px;
+  bottom: 50px;
+  font-family: "Contrail One";
+  transition: bottom 500ms;
+}
+
+#hero-image-block    .character-block .heal-text {
+  position: absolute;
+  font-size: 60px;
+  color: green;
+  width: 100%;
+  left: 0px;
+  bottom: 50px;
+  font-family: "Contrail One";
+  transition: bottom 500ms; 
+}
+
+#hero-image-block    .character-block .heal-text.healed {
+  bottom: 150px;  
+}
+
+
+#hero-image-block    .character-block .hurt-text.attacked,
+#monster-image-block .character-block .hurt-text.attacked {
+  bottom: 150px;
+}
+
+#hero-image-block .skill-block {
+  position: relative;
+}
+
+#hero-image-block .skill-image,
+#hero-image-block .heal-image {
+  width: 20%;
+}
+
+
+/* 設定 #monster-image-block .character-image 左右反轉 */
+#monster-image-block .character-image {
+  transform: scaleX(-1);
+}
+
+#dialog {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  text-align: center;
+}
+
+/* 預設 .win-dialog 與 .lose-dialog 為關閉，及其他共用的CSS */
+#dialog .win-dialog,
+#dialog .lose-dialog {
+  display: none;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px;
+  width: 200px;
+  top: 100px;
+  background: white;
+  border: 1px solid orange;
+}
+
+/* #dialog 同時有 win class 的話 把下面的win-block 打開 */
+#dialog.win .win-dialog {
+  display: block;
+}
+
+/* #dialog 同時有 lose class 的話 把下面的lose-block 打開 */
+#dialog.lose .lose-dialog {
+  display: block;
+}
